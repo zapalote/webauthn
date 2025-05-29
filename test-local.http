@@ -6,8 +6,3 @@ GET https://localhost/webauthn/webauthn/server.php?fn=getStoredDataJson
 
 ### getArgs
 GET https://localhost/webauthn/webauthn/server.php?fn=getCreateArgs&mds=1&type_int=1&type_hybrid=1&fmt_none=1&rpId=localhost&userId=64656d6f64656d6f&userName=demo@z.com&userDisplayName=Demo%20Demolin&userVerification=discouraged
-
-### precessCreate
-POST https://localhost/webauthn/webauthn/server.php?fn=processCreate&mds=1&type_int=1&type_hybrid=1&fmt_none=1&rpId=localhost&userId=64656d6f64656d6f&userName=demo%40z.com&userDisplayName=Demo%20Demolin&userVerification=discouraged
-
-{"transports":["hybrid","internal"],"clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiRFZXSjl2WnlEYjhpQWtKeGs5YnJEWDlfZDZROTVmVk1WQlVRRmRYcHZTRSIsIm9yaWdpbiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImNyb3NzT3JpZ2luIjpmYWxzZX0=","attestationObject":"o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViYSZYN5YgOjGh0NBcPZHZgW4/krrmihjLHmVzzuoMdl2NZAAAAAPv8MAcVTk7MjAtuAgVX170AFB/oPEJPwrcLd+ujR6BCL+gr40ajpQECAyYgASFYIM3QSMe1zvZwvU6gKz3lpVEfllHjj7p/JMqbK8Hn5tE0IlggAmsQwlGOJP7Sk9qrZ8P2d3m788VSmlhOVhXHZ38GrVI="}

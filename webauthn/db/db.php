@@ -21,12 +21,12 @@ function db_connect() {
     // connect, if not yet done
     if(!isset($db)) {
       // Load config as an array
-      if (file_exists(CAL_DB_PROD_INI)) {
+      if (file_exists(WEBAUTHN_DB_PROD_INI)) {
         # PROD
-        $cf = parse_ini_file(CAL_DB_PROD_INI);
+        $cf = parse_ini_file(WEBAUTHN_DB_PROD_INI);
       } else {
         # DEV
-        $cf = parse_ini_file(CAL_DB_DEV_INI);
+        $cf = parse_ini_file(WEBAUTHN_DB_DEV_INI);
       }
     // connect to the database
     $db = new mysqli($cf['servername'], $cf['username'], $cf['password'], $cf['dbname']);
