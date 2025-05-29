@@ -1,12 +1,14 @@
 # WebAuthn React Demo
 
-A React-based demonstration application for the [lbuchs/WebAuthn](https://github.com/lbuchs/WebAuthn) PHP library, showcasing FIDO2/WebAuthn authentication capabilities.
+A React-based demonstration application for the
+[lbuchs/WebAuthn](https://github.com/lbuchs/WebAuthn) PHP library,
+showcasing FIDO2/WebAuthn authentication capabilities.
 
 ## Overview
 
-This project provides a simple React frontend for testing and demonstrating WebAuthn (Web Authentication) functionality, including:
+This project provides a simple React frontend for testing and demonstrating WebAuthn (passkeys) functionality, including:
 
-- **Passwordless Registration**: Create new WebAuthn credentials (passkeys)
+- **Passwordless Registration**: Create new WebAuthn credentials (passkey)
 - **Authentication**: Login using registered credentials
 
 The purpose of this app is to be integrated in other Apps that require passkey authentication.
@@ -15,15 +17,18 @@ The purpose of this app is to be integrated in other Apps that require passkey a
 
 - Node.js (v16 or higher)
 - A WebAuthn-compatible browser (Chrome, Firefox, Safari, Edge)
-- The [lbuchs/WebAuthn](https://github.com/lbuchs/WebAuthn) PHP server running locally
+- The [lbuchs/WebAuthn](https://github.com/lbuchs/WebAuthn) PHP server
 - HTTPS connection (required for WebAuthn to function)
 
 ### Server Configuration
 
-The app expects a WebAuthn server running at:
+This app expects a WebAuthn server running at:
 ```
 https://localhost/webauthn/webauthn/server.php
 ```
+When integrated onto another app, the server can run anywhere,
+i.e. the server supports CORS.
+
 ## Usage
 
 ### Registration Flow
