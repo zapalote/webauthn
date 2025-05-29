@@ -26,8 +26,7 @@ This app expects a WebAuthn server running at:
 ```
 https://localhost/webauthn/webauthn/server.php
 ```
-When integrated onto another app, the server can run anywhere,
-i.e. the server supports CORS.
+When integrated into another app, the server can run anywhere as it supports CORS.
 
 ## Usage
 
