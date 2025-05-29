@@ -2,7 +2,7 @@
 
 use lbuchs\WebAuthn\Binary\ByteBuffer;
 
-require_once 'api/Binary/ByteBuffer.php';
+require_once 'lib/Binary/ByteBuffer.php';
 require_once 'db/config.php';
 global $db, $usr_table, $creds_table;
 

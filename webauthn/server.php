@@ -41,8 +41,8 @@ date_default_timezone_set('CET');
  * ------------------------------------------------------------
  */
 
-require_once 'api/WebAuthn.php';
-require_once 'api/Binary/ByteBuffer.php';
+require_once 'lib/WebAuthn.php';
+require_once 'lib/Binary/ByteBuffer.php';
 require_once 'db/config.php';
 require_once 'dbStore.php';
 
@@ -242,6 +242,9 @@ try {
         header('Content-Type: application/json');
         print(json_encode($return));
 
+        // remove the challenge file, we dont need it anymore
+        removeChallenge($userId);
+
 
         // ------------------------------------
         // request for get arguments: first step in validation (login)
@@ -316,9 +319,12 @@ try {
         header('Content-Type: application/json');
         print(json_encode($return));
 
-    // ------------------------------------
-    // proccess clear registrations
-    // ------------------------------------
+        // remove the challenge file, we dont need it anymore
+        removeChallenge($userId);
+
+        // ------------------------------------
+        // proccess clear registrations
+        // ------------------------------------
 
     } else if ($fn === 'clearRegistrations') {
         $_SESSION['registrations'] = null;
@@ -462,4 +468,11 @@ function retrieveChallenge($userId) {
         return \lbuchs\WebAuthn\Binary\ByteBuffer::fromHex($data);
     }
     return null;
+}
+
+function removeChallenge($userId) {
+    $file = CHALLENGE_STORE . '/' . $userId . '.challenge';
+    if (is_file($file)) {
+        unlink($file);
+    }
 }
